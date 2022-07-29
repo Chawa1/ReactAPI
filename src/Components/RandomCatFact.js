@@ -33,7 +33,7 @@ export default function RandomCatFact() {
           });
       }, []);
     
-      return (
+      /* return (
         <div>
           <div>
             <p>Fact: {catFact.fact}</p>
@@ -43,8 +43,9 @@ export default function RandomCatFact() {
             ) : (
               <p> the fact is less than 20 chars</p>
             )}
-            {/* <p>Length: {catFact.length}</p> */}
+             <p>Length: {catFact.length}</p> 
           </div>
         </div>
-      )
+      ) */
+    
 }

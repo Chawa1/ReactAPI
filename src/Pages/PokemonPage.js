@@ -14,7 +14,7 @@ export default function PokemonPage() {
     useEffect(() => {
       // https://pokeapi.co/api/v2/pokemon/1
       axios
-        .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .get(`https://pokeapi.co/api/v2/pokemon/$id`)
         .then((result) => {
           console.log(result.data);
           setPokemon(result.data);
@@ -32,7 +32,7 @@ export default function PokemonPage() {
         {/* {JSON.stringify(pokemon)} */}
   
         <input type="text" placeholder="search" />
-        <img src={pokemon.sprites.front_default} />
+        <img src={pokemon.sprites.front_default}  />
         <h2 className="text-2xl"> {pokemon.name.toUpperCase()}</h2>
   
         <p>the abilities of the pokemon are:</p>

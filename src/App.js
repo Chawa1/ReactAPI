@@ -7,13 +7,14 @@ import Navbar from './components/Navbar';
 import Pokemons from './pages/Pokemons';
 import UserPage from './pages/UserPage';
 import PokemonPage from './pages/PokemonPage';
+/* import RandomCatFact from './Components/RandomCatFact'; */
 
 
 function App() {
   return (
     <div className='App'>
 
-      {/* <RandomCatFact /> */}
+     {/*  <RandomCatFact />  */}
 
     <Navbar />
 
@@ -24,9 +25,9 @@ function App() {
   <Route path="/pokemons" element={<Pokemons />} />
 
   {/* new dynamic route */}
-  <Route path="/user/:id" element={<UserPage />} />
-  <Route path="/pokemon/:id" element={<PokemonPage />} />
-  <Route path="*" element={<p> 404, page not found</p>} />
+  <Route path="/user/:id" element={<UserPage />} /> {/* Ama bo profile ii user a kaya  haryakayan id yaki pe ayat */}
+  <Route path="/pokemon/:id" element={<PokemonPage />} /> {/* Ama bo profile i pokimon page akaya haryakayan id yaki pe ayat */}
+  <Route path="*" element={<p> 404, page not found</p>} /> {/* har shteki ka bo aw paragrapha pshan bdata */}
 </Routes>
     </div>
 

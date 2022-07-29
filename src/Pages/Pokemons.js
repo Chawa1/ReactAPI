@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+import { useSelector } from 'react-redux/es/exports';
+
 export default function Users() {
     const [pokemons, setPokemons] = useState([]);
     const [err, setErr] = useState('');
+
+    const user = useSelector((state) => state.user);
   
     useEffect(() => {
       axios
@@ -21,7 +25,8 @@ export default function Users() {
   
     return (
       <div className="container mx-auto  m-10">
-        {JSON.stringify(pokemons)}
+        {/* {JSON.stringify(pokemons)} */}  {/* ama boi datai api kaman pishan batawa */}
+        slaw {user.username}
         <ul>
           {pokemons.map((pokemon, index) => {
             return (
